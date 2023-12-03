@@ -1,0 +1,54 @@
+''' 
+
+version (v000). testing waters. this will either be modified or changed completely. 
+
+but hey, why not share it? won't kill me. plus, whoever wants to hop on the 'trust restoration' train with me, 'ess go.
+
+and whoever wants to copycat? coolio. the vision will be carried. as long as transparency wins, i'm coolio with it.
+
+idgaf who gets the credit. if we lose trust, we lose society.the last thing to worry about is the credit.
+
+ok, enough speech. let's get shit done.
+
+'''
+
+def save_user_input(user_input):
+    with open('user_inputs.txt', 'a') as file:
+        file.write(user_input + '\n')
+
+def amina():
+    while True:
+        name_input = input("what's your name?: ").strip().lower()
+        user_input = input("type 'amina' to begin: ").strip().lower()
+
+        if user_input == "amina":
+            print("hello! i'm amina.")
+            print("what issue do you want to share with your local politician,", name_input + "?")
+            print("please provide details or describe the problems you are facing.")
+            print("video/images are appreciated to understand your situation.")
+            # add more questions or prompts as needed
+            
+            # get user input and save it to a file
+            user_concern = input(f"{name_input}: ")
+            save_user_input(user_concern)
+            print("your concern has been sent.") 
+            print("thank you,", name_input + "!")
+            break #consider removing. maybe. why? to continue the loop. maybe.
+        else:
+            if user_input.lower() == "exit":
+                print("exiting the chatbot. goodbye,", name_input + ".")
+                break
+            else:
+                print("i'm sorry,", name_input + ".")
+                print("type 'amina' to send a request or type 'exit' to leave.")
+
+if __name__ == "__main__":
+    print("wassup, citizen. type 'amina' to begin or 'exit' to quit.")
+    
+    
+amina()
+
+
+
+
+  
